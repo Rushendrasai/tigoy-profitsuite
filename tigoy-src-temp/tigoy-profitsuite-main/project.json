@@ -1,0 +1,21 @@
+{
+  "overview": "A real-time profit margin calculator with dual calculation modes, live donut chart visualization, fee presets, break-even analysis, and localStorage-backed product profile management — styled after the TIGOY.com ProfitSuite branding.",
+  "features": [
+    "Standard & Target calculation modes",
+    "Real-time donut chart (cost/fees/tax/profit split)",
+    "Transaction fee presets: Stripe, PayPal, Etsy",
+    "What-If margin slider",
+    "Break-even analysis",
+    "Save & compare product profiles via localStorage"
+  ],
+  "category": "tool",
+  "tags": [
+    "calculator",
+    "profit",
+    "margin",
+    "pricing",
+    "business",
+    "finance"
+  ],
+  "last_updated": "2026-04-17T09:33:35.704Z"
+}

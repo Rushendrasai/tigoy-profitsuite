@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", sans-serif;
+    --font-body: "Plus Jakarta Sans", sans-serif;
+    --font-mono: monospace;
+    --radius: 0.75rem;
+
+    --background: 0.99 0 0;
+    --foreground: 0.15 0.02 238;
+    --card: 1.0 0 0;
+    --card-foreground: 0.15 0.02 238;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.15 0.02 238;
+
+    --primary: 0.55 0.16 263;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.95 0 0;
+    --secondary-foreground: 0.25 0 0;
+    --muted: 0.92 0.01 238;
+    --muted-foreground: 0.52 0.02 238;
+
+    --accent: 0.55 0.16 263;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.9 0.01 238;
+    --input: 0.9 0.01 238;
+    --ring: 0.55 0.16 263;
+
+    --chart-1: 0.49 0.24 264;
+    --chart-2: 0.7 0.17 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.65 0.25 16;
+    --chart-5: 0.63 0.27 304;
+
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.15 0.02 238;
+    --sidebar-primary: 0.55 0.16 263;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.92 0.01 238;
+    --sidebar-accent-foreground: 0.25 0 0;
+    --sidebar-border: 0.9 0.01 238;
+    --sidebar-ring: 0.55 0.16 263;
+
+    --success: 0.6 0.16 134;
+    --warning: 0.75 0.18 47;
+  }
+
+  .dark {
+    --background: 0.14 0.01 263;
+    --foreground: 0.94 0.01 238;
+    --card: 0.18 0.01 263;
+    --card-foreground: 0.94 0.01 238;
+    --popover: 0.22 0.01 263;
+    --popover-foreground: 0.94 0.01 238;
+
+    --primary: 0.72 0.19 263;
+    --primary-foreground: 0.14 0.01 263;
+
+    --secondary: 0.22 0.01 263;
+    --secondary-foreground: 0.88 0.01 238;
+    --muted: 0.22 0.01 263;
+    --muted-foreground: 0.58 0.02 238;
+
+    --accent: 0.72 0.19 263;
+    --accent-foreground: 0.14 0.01 263;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.14 0.01 263;
+
+    --border: 0.28 0.01 263;
+    --input: 0.28 0.01 263;
+    --ring: 0.72 0.19 263;
+
+    --chart-1: 0.49 0.24 264;
+    --chart-2: 0.7 0.17 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.65 0.25 16;
+    --chart-5: 0.63 0.27 304;
+
+    --sidebar: 0.18 0.01 263;
+    --sidebar-foreground: 0.94 0.01 238;
+    --sidebar-primary: 0.72 0.19 263;
+    --sidebar-primary-foreground: 0.14 0.01 263;
+    --sidebar-accent: 0.22 0.01 263;
+    --sidebar-accent-foreground: 0.88 0.01 238;
+    --sidebar-border: 0.28 0.01 263;
+    --sidebar-ring: 0.72 0.19 263;
+
+    --success: 0.7 0.19 134;
+    --warning: 0.6 0.22 47;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hide number input spinners for cleaner fintech UI */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .text-green-profit {
+    @apply text-[oklch(0.60_0.16_134)];
+  }
+
+  .text-red-fee {
+    @apply text-[oklch(0.65_0.19_22)];
+  }
+
+  .section-number {
+    @apply font-black text-lg text-primary opacity-60;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-input focus:border-ring focus:ring-4 focus:ring-ring/10 outline-none transition-all text-base font-semibold text-foreground;
+  }
+
+  .card-elevated {
+    @apply rounded-3xl border border-border bg-card shadow-sm;
+  }
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: swap;
+}
