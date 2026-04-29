@@ -8,10 +8,6 @@ const NAV_LINKS = [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const year = new Date().getFullYear();
-  const hostname =
-    typeof window !== "undefined" ? window.location.hostname : "";
-
   return (
     <div className="min-h-screen bg-background font-body flex flex-col">
       {/* Top Navigation */}
@@ -139,15 +135,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
           {/* Copyright */}
           <p className="text-sm text-muted-foreground text-center">
-            © {year}. Built with love using{" "}
-            <a
-              href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(hostname)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              caffeine.ai
-            </a>
+            © 2025 TIGOY.com | Huncity.com. All rights reserved.
           </p>
         </div>
       </footer>

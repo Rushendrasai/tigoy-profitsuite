@@ -23787,8 +23787,6 @@ const NAV_LINKS = [
   { label: "Contact Us", href: "https://hubcity.net/contacthubcity.html" }
 ];
 function Layout({ children }) {
-  const year = (/* @__PURE__ */ new Date()).getFullYear();
-  const hostname = typeof window !== "undefined" ? window.location.hostname : "";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-background font-body flex flex-col", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "nav",
@@ -23907,22 +23905,7 @@ function Layout({ children }) {
             },
             link.href
           )) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-muted-foreground text-center", children: [
-            "© ",
-            year,
-            ". Built with love using",
-            " ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "a",
-              {
-                href: `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(hostname)}`,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "text-primary hover:underline font-medium",
-                children: "caffeine.ai"
-              }
-            )
-          ] })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground text-center", children: "© 2025 TIGOY.com | Huncity.com. All rights reserved." })
         ] })
       }
     )
